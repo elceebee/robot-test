@@ -25,15 +25,15 @@ describe RobotMover do
     it "turns counter-clockwise" do
       north_facing_robot = @robot_mover.place(x: 0, y: 0, facing: "NORTH")
       west_facing_robot = @robot_mover.left(north_facing_robot)
-      west_facing_robot.facing.must_equal "West"
+      west_facing_robot.facing.must_equal "WEST"
 
       south_facing_robot = @robot_mover.left(west_facing_robot)
-      south_facing_robot.facing.must_equal "South"
+      south_facing_robot.facing.must_equal "SOUTH"
 
       east_facing_robot = @robot_mover.left(south_facing_robot)
-      east_facing_robot.facing.must_equal "East"
+      east_facing_robot.facing.must_equal "EAST"
 
-      @robot_mover.left(east_facing_robot).facing.must_equal "North"
+      @robot_mover.left(east_facing_robot).facing.must_equal "NORTH"
     end
   end
 
@@ -45,15 +45,15 @@ describe RobotMover do
     it "turns the robot clockwise" do
       north_facing_robot = @robot_mover.place(x: 0, y: 0, facing: "NORTH")
       east_facing_robot = @robot_mover.right(north_facing_robot)
-      east_facing_robot.facing.must_equal "East"
+      east_facing_robot.facing.must_equal "EAST"
 
       south_facing_robot = @robot_mover.right(east_facing_robot)
-      south_facing_robot.facing.must_equal "South"
+      south_facing_robot.facing.must_equal "SOUTH"
 
       west_facing_robot = @robot_mover.right(south_facing_robot)
-      west_facing_robot.facing.must_equal "West"
+      west_facing_robot.facing.must_equal "WEST"
 
-      @robot_mover.right(west_facing_robot).facing.must_equal "North"
+      @robot_mover.right(west_facing_robot).facing.must_equal "NORTH"
     end
   end
 

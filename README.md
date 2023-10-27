@@ -10,7 +10,7 @@
   will output
 
 ```
-The robot is facing West at 0, 1.
+0,1,WEST
 ■ ■ ■ ■ ■
 ■ ■ ■ ■ ■
 ■ ■ ■ ■ ■

@@ -23,7 +23,7 @@ class RobotMover
     end
 
     def facing
-      DIRECTIONS[f].capitalize
+      DIRECTIONS[f]
     end
   end
 
@@ -35,7 +35,7 @@ class RobotMover
     return position unless position.valid?
 
     printf <<~HEREDOC
-      The robot is facing #{position.facing} at #{position.x}, #{position.y}.
+      #{position.x},#{position.y},#{position.facing}
       #{position_map(position)}
     HEREDOC
 
