@@ -84,7 +84,7 @@ class RobotMover
                    end
         end
       else
-        table << '■ ' * 5 unless position.y == row
+        table << '■ ' * TABLE_MAX + 1
       end
       table << "\n"
     end
